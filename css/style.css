@@ -155,8 +155,14 @@ header .header_top {
   left: 80%;
   opacity: 0;
   visibility: hidden;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
+.left_menu .menu_2dp.on {
+  opacity: 1;
+  visibility: visible;
+}
 
 .fix_top {
   /* width: 100%; */
@@ -404,7 +410,7 @@ header .header_top {
   height: 200px;
 }
 
-.item_pic {
+.item_top .item_image {
   width: 100%;
   height: 100%;
   background-image: url(../img/img1.jpg);
@@ -573,4 +579,125 @@ header .header_top {
 .exhbt_image a:hover .info span {
   opacity: 1;
   transform: translate(-50%,-50%);
+}
+
+/* keyword 영역 ----- */
+.keyword {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.keyword .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* background-color: #999; */
+  position: relative;
+  padding: 0 10px;
+  width: 100%;
+  height: 800px;
+}
+
+.tab .tab_menu {
+  display: flex;
+  margin-top: 30px;
+}
+
+.tab .tab_menu li {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.tab_item_wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tab_item>ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab_item li {
+  margin: 10px;
+}
+
+.tab .tab_menu li.on {
+  color: aqua;
+}
+
+.tab_item .item_image a {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.tab_item .item_image {
+  width: 274px;
+  height: 274px;
+  position: relative;
+}
+
+.tab_item .item_image img {
+  width: 100%;
+  height: 100%;
+}
+
+.item_info {
+  width: 100%;
+  position: relative;
+}
+
+.tab_item1 {
+  position: relative;
+}
+
+.tab_item2,
+.tab_item3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tab_item {
+  display: none;
+}
+
+.tab_item.on {
+  display: block;
+}
+
+/* 푸터 영역 */
+footer {
+  width: 100%;
+  position: relative;
+  background-color: #555;
+}
+
+footer .container {
+  max-width: 1180px;
+  margin: 0 auto;
+  background-color: #888;
+  position: relative;
+  padding: 0 10px;
+}
+
+.footer_contents_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.foot_menu_list {
+  display: flex;
+}
+
+.sns ul {
+  display: flex;
 }

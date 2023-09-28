@@ -70,6 +70,19 @@ $(document).ready(function () {
     // ]
   });
 
+  $('.left_menu .menu_1dp>li').mouseenter(function () {
+    $(this).find('.menu_2dp').addClass('on');
+  })
+  $('.left_menu .menu_1dp>li').mouseleave(function () {
+    $(this).find('.menu_2dp').removeClass('on');
+  })
+
+
+
+
+
+
+
   //.best_item_slide .item영역에 마우스 오버시 상품 정보 노출
   $('.best_item_slide .item').mouseenter(function () {
     $(this).find('.txt').addClass('active');
@@ -77,6 +90,22 @@ $(document).ready(function () {
   $('.best_item_slide .item').mouseleave(function () {
     $(this).find('.txt').removeClass('active');
   })
+
+
+  // keyword 영역 tab바 구현
+  // .tab_menu li의 순번찾기
+  $('.tab .tab_menu li').click(function(){
+    let i = $(this).index()
+    console.log(i)
+
+    $('.tab_item').hide()
+  $('.tab_item').eq(i).show()
+
+  $('.tab .tab_menu li').removeClass('on')
+  $(this).addClass('on')
+  })
+  
+
 
 })
 
