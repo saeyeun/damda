@@ -42,8 +42,8 @@ $(document).ready(function () {
 
   $('.best_item_slide').slick({
     centerMode: true,
-    centerPadding: '10px',
-    slidesToShow: 5,
+    centerPadding: '50px',
+    slidesToShow: 4,
     arrows: true,
     infinite: true,
     pauseOnHover: false,
@@ -70,10 +70,10 @@ $(document).ready(function () {
     // ]
   });
 
-  $('.left_menu .menu_1dp>li').mouseenter(function () {
+  $('.left_menu .menu_1dp_list>li').mouseenter(function () {
     $(this).find('.menu_2dp').addClass('on');
   })
-  $('.left_menu .menu_1dp>li').mouseleave(function () {
+  $('.left_menu .menu_1dp_list>li').mouseleave(function () {
     $(this).find('.menu_2dp').removeClass('on');
   })
 
@@ -85,10 +85,10 @@ $(document).ready(function () {
 
   //.best_item_slide .item영역에 마우스 오버시 상품 정보 노출
   $('.best_item_slide .item').mouseenter(function () {
-    $(this).find('.txt').addClass('active');
+    $(this).find('.item_info').addClass('active');
   })
   $('.best_item_slide .item').mouseleave(function () {
-    $(this).find('.txt').removeClass('active');
+    $(this).find('.item_info').removeClass('active');
   })
 
 
