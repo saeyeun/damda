@@ -320,6 +320,68 @@ header .header_top {
   bottom: 22px;
 }
 
+.mainSlide .txt_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+
+.mainSlide .txt_box .txt_top {
+  width: 500px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+.mainSlide .txt_box .txt_bottom {
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 34px;
+  letter-spacing: 0px;
+}
+
+.mainSlide .txt_box>p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s;
+}
+
+.mainSlide .slick-active>.txt_box>p {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.mainSlide .item:nth-child(1) .txt_box {
+  top: 125px;
+  left: 530px;
+  text-align: left;
+}
+
+.mainSlide .item:nth-child(2) .txt_box {
+  top: 75px;
+  left: 714px;
+}
+
+.mainSlide .item:nth-child(2) .txt_box {
+  top: 75px;
+  left: 714px;
+}
+
+.mainSlide .item:nth-child(2) .txt_box .txt_bottom {
+  padding-top: 24px;
+}
+
+.mainSlide .item:nth-child(3) .txt_box {
+  top: 134px;
+  left: 648px;
+}
+
+.mainSlide .item:nth-child(3) .txt_box .txt_bottom {
+  padding-top: 24px;
+}
+
 /* 카테고리 배너 */
 .cate_icon {
   width: 100%;

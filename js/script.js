@@ -8,7 +8,7 @@ $(document).ready(function () {
     speed: 500,
     pauseOnHover: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 1500,
     draggable: false,
     //   responsive: [
     //           {
