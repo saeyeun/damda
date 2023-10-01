@@ -21,10 +21,13 @@ a {
 img {
   vertical-align: bottom;
 }
+html {
+  height: 100%;
+}
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   overflow-x: hidden;
 }
@@ -42,8 +45,7 @@ header {
 }
 
 header .header_top {
-  width: 100%;
-  max-width: 1280px;
+  width: 1280px;
   height: 80px;
   margin: 0 auto;
   /* background-color: #c8c8c8; */
@@ -110,15 +112,15 @@ header .header_top {
 }
 
 .header_fix {
-  width: 100%;
+  /* width: 100%; */
   height: 56px;
   
 }
 
 .header_fix .container {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   position: relative;
   padding: 0 10px;
@@ -387,12 +389,12 @@ section .container >.title {
 
 /* best pick 영역 */
 .best {
-  width: 100%;
+  /* width: 100%; */
   position: relative;
 }
 
 .best .container {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   position: relative;
 }
@@ -501,32 +503,42 @@ section .container >.title {
 
 /* banner 영역 */
 .banner {
-  width: 100%;
+  /* width: 100%; */
   position: relative;
   padding: 50px 0;
 }
 
 .banner .container {
-  max-width: 1280px;
+  width: 1280px;
+  height: 200px;
   margin: 0 auto;
   background-color: #ccc;
   position: relative;
-  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.banner span {
+  display: block;
+  position: relative;
+  z-index: -1;
+  text-align: center;
 }
 
 .banner .banner_img {
   width: 100%;
-  height: 140px;
+  height: 100%;
+  background-image: url(../img/banner_img.png);
+  border-radius: 10px;
 }
 
 /* 기획전 영역 */
 .exhbt {
-  width: 100%;
+  /* width: 100%; */
   position: relative;
 }
 
 .exhbt .container {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   /* background-color: #aaa; */
   position: relative;
@@ -693,19 +705,18 @@ section .container >.title {
 
 /* keyword 영역 ----- */
 .keyword {
-  width: 100%;
-  height: 950px;
+  /* width: 1280px; */
+  height: 960px;
   position: relative;
   padding: 50px 0;
 }
 
 .keyword .container {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   position: relative;
   padding: 0 10px;
-  width: 100%;
-  height: 950px;
+  height: 960px;
 }
 
 .tab .tab_menu {
@@ -751,12 +762,13 @@ section .container >.title {
 .tab_item>ul {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
 }
 
 .tab_item li {
   margin: 16px 20px;
+  float: left;
 }
 
 .tab .tab_menu li.on {
@@ -812,14 +824,14 @@ section .container >.title {
 
 /*timeSale 영역*/
 .timeSale {
-  width: 100%;
+  /* width: 100%; */
   position: relative;
   /* padding-top: 80px; */
   margin-bottom: 20px;
 }
 
 .timeSale .container {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   /* background-color: #bbb; */
   position: relative;
@@ -962,13 +974,12 @@ section .container >.title {
 
 /* 푸터 영역 */
 footer {
-  width: 100%;
   position: relative;
   background-color: #e9eefe;
 }
 
 footer .container {
-  max-width: 1180px;
+  width: 1280px;
   margin: 0 auto;
   /* background-color: #888; */
   position: relative;
@@ -976,14 +987,89 @@ footer .container {
 }
 
 .footer_contents_wrap {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
 }
+
+.footer_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+} 
 
 .foot_menu_list {
   display: flex;
 }
 
-.sns ul {
+.sns {
   display: flex;
 }
+
+.sns li a {
+  margin-left: 20px;
+}
+
+.sns i {
+  font-size: 22px;
+  color: #2a2a2a;
+}
+
+.foot_menu_list li:nth-child(1):after,
+.foot_menu_list li:nth-child(2):after {
+  content: 'ㅣ';
+  color: #595959;
+}
+
+.foot_menu_list a {
+  font-size: 14px;
+  color: #595959;
+}
+
+.footer_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.foot_logo {
+  font-size: 26px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.footer_bottom ul {
+  color: #595959;
+}
+
+.footer_bottom ul li span {
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.copyright {
+  color: #595959;
+  font-size: 12px;
+}
+.csCenter_info {
+  color: #2a2a2a;
+}
+
+.csCenter_info strong {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.csCenter_info p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.csCenter_btn {
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+}
+
