@@ -14,7 +14,7 @@
   <script src="https://kit.fontawesome.com/85ac904405.js" crossorigin="anonymous"></script>
   <!-- 외부 스크립크 연결 -->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
 </head>
 
@@ -22,11 +22,11 @@
   <header>
     <div class="header_top">
       <h1 class="logo">
-        <em>Dam</em>,da
+        <em>Dam</em>da
       </h1>
       <div class="search_bar">
-        <form action="">
-          <input type="text" placeholder="2024 다이어리 기획전 미리보기">
+        <form action="/search">
+          <input type="text" placeholder="2024 다이어리 기획전 미리보기" aria-label="상품 및 키워드 검색">
           <button><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
       </div>
@@ -57,67 +57,6 @@
             <div class="fix_cate_btn">
               <h2><i class="fa fa-bars" aria-hidden="true"></i>전체 카테고리</h2>
             </div>
-            <!-- 전체 카테고리 클릭 시 나타나는 메뉴 -->
-            <!-- <div class="all_cate">
-              <div class="inner">
-                <ul class="menu_1dp">
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">선물박스</a>
-                    <ul class="menu_2dp">
-                      <li><a href="#">스퀘어</a></li>
-                      <li><a href="#">스퀘어</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div> -->
             <div class="left_menu">
               <div class="inner">
                 <ul class="menu_1dp_list">
@@ -206,23 +145,26 @@
           </div>
         </div>
         <div class="fix_top">
-          <ul class="fix_top_left">
-            <li><a href="#">신상품</a></li>
-            <li><a href="#">베스트</a></li>
-            <li><a href="#">기획전</a></li>
-            <li><a href="#">이벤트</a></li>
+          <div class="fix_top_inner">
+            <ul class="fix_top_left">
+              <li><a href="#">신상품</a></li>
+              <li><a href="#">베스트</a></li>
+              <li><a href="#">기획전</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
             <ul class="fix_top_right">
               <li><a href="#">로그인</a></li>
               <li><a href="#">회원가입</a></li>
               <li><a href="#">무료배송</a></li>
               <li><a href="#">쿠폰</a></li>
             </ul>
-          </ul>
+          </div>
         </div>
       </div>
+    </div>
   </header>
   <main>
-    <section class="mainSlide">
+    <div class="mainSlide">
       <div class="item">
         <div class="txt_box">
           <p class="txt_top">가을맞이<br>나만의 홈카페 꾸미기</p>
@@ -244,8 +186,8 @@
         </div>
         <img src="img/main_slide_3.jpg" alt="일상을 더욱 빛나게. 공간의 분위기를 바꾸는 조명">
       </div>
-    </section>
-    <section class="cate_icon">
+    </div>
+    <div class="cate_icon">
       <div class="container">
         <ul class="cate_icon_list">
           <li>
@@ -340,9 +282,9 @@
           </li>
         </ul>
       </div>
-    </section>
+    </div>
     <!-- best 영역 -->
-    <section class="best">
+    <div class="best">
       <div class="container">
         <div class="title">
           <h2 class="headline">Best Pick</h2>
@@ -424,18 +366,18 @@
           </a>
         </div>
       </div>
-    </section>
+    </div>
     <!-- banner 영역 -->
-    <section class="banner">
+    <div class="banner">
       <div class="container">
         <div class="banner_img">
           <span>가구&디지털 최대 30% 할인</span>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- 기획전 -->
-    <section class="exhbt">
+    <div class="exhbt">
       <div class="container">
         <div class="title">
           <h2 class="headline">다양한 기획전을 만나보세요</h2>
@@ -485,8 +427,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="keyword">
+    </div>
+    <div class="keyword">
       <div class="container">
         <div class="title">
           <h2 class="headline">오늘의 키워드</h2>
@@ -505,8 +447,8 @@
             <ul class="tab_item1">
               <li>
                 <div class="item_image">
-                  <img src="img/tab_item1_img1.jpg" alt="밝기 조절 테이블 스탠드(핑크)">
                   <a href="#"></a>
+                  <img src="img/tab_item1_img1.jpg" alt="밝기 조절 테이블 스탠드(핑크)">
                 </div>
                 <div class="item_info">
                   <a href="#">
@@ -539,8 +481,8 @@
               </li>
               <li>
                 <div class="item_image">
-                  <img src="img/tab_item1_img3.jpg" alt="심플 벽조명 월램프 블랙">
                   <a href="#"></a>
+                  <img src="img/tab_item1_img3.jpg" alt="심플 벽조명 월램프 블랙">
                 </div>
                 <div class="item_info">
                   <a href="#">
@@ -556,8 +498,8 @@
               </li>
               <li>
                 <div class="item_image">
-                  <img src="img/tab_item1_img4.jpg" alt="인테리어 무선 테이블 조명">
                   <a href="#"></a>
+                  <img src="img/tab_item1_img4.jpg" alt="인테리어 무선 테이블 조명">
                 </div>
                 <div class="item_info">
                   <a href="#">
@@ -573,8 +515,8 @@
               </li>
               <li>
                 <div class="item_image">
-                  <img src="img/tab_item1_img5.jpg" alt="LED 달 무드등(리모컨+타이머)">
                   <a href="#"></a>
+                  <img src="img/tab_item1_img5.jpg" alt="LED 달 무드등(리모컨+타이머)">
                 </div>
                 <div class="item_info">
                   <a href="#">
@@ -590,8 +532,8 @@
               </li>
               <li>
                 <div class="item_image">
-                  <img src="img/tab_item1_img6.jpg" alt="눈이 편안한 옐로우 책상 스탠드">
                   <a href="#"></a>
+                  <img src="img/tab_item1_img6.jpg" alt="눈이 편안한 옐로우 책상 스탠드">
                 </div>
                 <div class="item_info">
                   <a href="#">
@@ -607,8 +549,8 @@
               </li>
               <li>
                 <div class="item_image">
-                  <img src="img/tab_item1_img7.jpg" alt="크리스탈 플리츠 단스탠드">
                   <a href="#"></a>
+                  <img src="img/tab_item1_img7.jpg" alt="크리스탈 플리츠 단스탠드">
                 </div>
                 <div class="item_info">
                   <a href="#">
@@ -624,8 +566,8 @@
               </li>
               <li>
                 <div class="item_image">
-                  <img src="img/tab_item1_img8.jpg" alt="우드 단스탠드">
                   <a href="#"></a>
+                  <img src="img/tab_item1_img8.jpg" alt="우드 단스탠드">
                 </div>
                 <div class="item_info">
                   <a href="#">
@@ -641,7 +583,7 @@
               </li>
             </ul>
           </div>
-          
+
           <!-- tab_item2 -->
           <div class="tab_item">
             <ul class="tab_item2">
@@ -924,9 +866,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!-- timeSale 영역 -->
-    <section class="timeSale">
+    <div class="timeSale">
       <div class="container">
         <div class="title">
           <h2 class="headline">특가세일</h2>
@@ -1028,7 +970,7 @@
           <button>특가상품 전체보기</button>
         </div>
       </div>
-    </section>
+    </div>
   </main>
   <!-- 푸터 영역 -->
   <footer>
@@ -1048,12 +990,12 @@
           </ul>
           <ul class="sns">
             <li>
-              <a href="#">
+              <a href="#" aria-label="instagram">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" aria-label="facebook">
                 <i class="fa fa-facebook-square" aria-hidden="true"></i>
               </a>
             </li>
@@ -1062,29 +1004,29 @@
         <div class="footer_bottom">
           <div class="foot_info">
             <div class="foot_logo">
-              Dam,da
+              Damda
             </div>
             <ul>
               <li>
-                <span>사업자등록번호 : 000-000-0000</span>
-                <span>CEO: OOO</span>
-                <span>adress : 서울특별시 강남구 ㅇㅇㅇ ㅇㅇㅇㅇ ㅇㅇ</span>
+                <span>사업자등록번호 : 123-456-7890</span>
+                <span>CEO: 홍길동</span>
+                <span>adress : 서울특별시 강남구 논현로 111길 22</span>
               </li>
             </ul>
             <ul>
               <li>
-                <span>phone : 000-000-000</span>
-                <span>Fax: 000-000-0000</span>
+                <span>phone : 010-456-7890</span>
+                <span>Fax: 02-3456-7800</span>
               </li>
             </ul>
-            <p class="copyright">copyright...</p>
+            <p class="copyright">copyright &copy; 2023 Yoo-Sae-Yeon. All Rights Reserved.</p>
           </div>
 
           <div class="csCenter_info">
             <strong>고객센터 1555-9999</strong>
             <p>평일 9:00 - 8:00</p>
             <p>점심 12:00 - 13:00</p>
-            <button class="csCenter_btn">고객센터 바로가기 ></button>
+            <a href="#" class="csCenter_btn" role="button" aria-label="cs_center">고객센터 바로가기 ></a>
           </div>
         </div>
       </div>
